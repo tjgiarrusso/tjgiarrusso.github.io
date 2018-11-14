@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Welcome to Beer TAP!</h1>
+    <p class="lead">
+      Your one stop destination for all your alcoholic needs!
+    </p>
+  </div>
+</div>
+
+
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>License</th>
+				<th>Address</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zipcode</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let bar of bars; index as i">
+				<th>{{ i + 1 }}</th>
+				<th>{{ bar.BAR_NAME }}</th>
+				<th>{{ bar.LICENSE }}</th>
+				<th>{{ bar.ADDRESS }}</th>
+				<th>{{ bar.CITY }}</th>
+				<th>{{ bar.STATE }}</th>
+				<th>{{ bar.ZIPCODE }}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</body>
+
+</html>
