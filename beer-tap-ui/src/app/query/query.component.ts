@@ -6,22 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./query.component.css']
 })
 export class QueryComponent implements OnInit {
-
-  constructor() { }
+  newURL: string
+  constructor() {}
 
   ngOnInit() {
+    console.log("WARNING: CANNOT USE PARENTHESES IN QUERY DUE TO ROUTING ISSUE WITH ANGULAR ITSELF \
+    PERTAINING TO USING PARENTHESES IN A URL: https://github.com/angular/angular/issues/10280");
   }
-  
-  submitForm(str) {
-	  var q = {query: str};
-	  var strq = JSON.stringify(q);
-	  
-	  // CHANGE FROM LOCALHOST TO WEBSITE URL
-	  var url = "http://localhost:4200/api/query"
-	  var xmlhttp = new XMLHttpRequest();
-	  xmlhttp.open("POST", url, true);
-	  xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
-	  xmlhttp.send(strq);
+
+  submitForm(newQuery: string) {
+    var q = newQuery;
+    console.log(q);
+    this.newURL = "/query/" + q;
+    location.href = this.newURL;
   }
 
 }

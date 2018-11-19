@@ -5,21 +5,21 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#">
+  <a class="navbar-brand" href="#">Beer TAP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/drinker/">Drinkers</a>
+      </li>
+	    <li class="nav-item">
+		    <a class="nav-link" routerLink="/bars/">Bars</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/api/bar">Bars</a>
+        <a class="nav-link" routerLink="/query/">Modifications and Custom Queries</a>
       </li>
-	  <li class="nav-item">
-		<a class="nav-link" href="/api/query">Query</a>
-	  </li>
     </ul>
   </div>
 </nav>
