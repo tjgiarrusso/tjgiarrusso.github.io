@@ -1,1 +1,0 @@
-database_uri = "mysql+pymysql://beertaplogin:tjaprilparis@beertap.c47vf0v1hkgy.us-east-2.rds.amazonaws.com:3306/beertapschema"
