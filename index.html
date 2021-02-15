@@ -17,18 +17,20 @@
         }
     </style>
     <script>
-        var d = new Date()
-        var weekday = d.getDay()
+        function getAnswer() {
+            var d = new Date()
+            var weekday = d.getDay()
 
-        if (weekday == 6) {
-            document.getElementById("answer").innerHTML = "Yes!"
-        } else {
-            document.getElementById("answer").innerHTML = "No."
+            if (weekday == 6) {
+                document.getElementById("answer").innerHTML = "Yes!"
+            } else {
+                document.getElementById("answer").innerHTML = "No."
+            }
         }
     </script>
 </head>
 
-<body>
+<body onload="getAnswer()">
     <div>
         <h1>Is it Saturday yet?</h1>
         <p id="answer"></p>
