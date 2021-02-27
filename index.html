@@ -1,45 +1,92 @@
 <!DOCTYPE html>
-
 <html>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-<head>
-    <style>
-        h1 {
-            text-align: center;
-            font-size: 500%;
-            font-family: cursive;
-        }
+body {
+  margin: 0;
+}
 
-        p {
-            text-align: center;
-            font-size: 300%;
-            font-family: cursive;
-        }
-    </style>
-    <script>
-        function getAnswer() {
-            var d = new Date()
-            var weekday = d.getDay()
+.header {
+    text-align: center;
+    font-size: 250%;
+    font-family: cursive;
+    color: red;
+}
 
-            if (weekday == 6) {
-                document.getElementById("answer").innerHTML = "Yes!"
-                document.getElementById("answer").style.color = "green"
-            } else if (weekday == 5) {
-                document.getElementById("answer").innerHTML = "Almost!"
-                document.getElementById("answer").style.color = "yellow"
-            } else {
-                document.getElementById("answer").innerHTML = "No. :'("
-                document.getElementById("answer").style.color = "red"
-            }
-        }
-    </script>
-</head>
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
 
-<body onload="getAnswer()">
-    <div>
-        <h1>Is it Saturday yet?</h1>
-        <p id="answer"></p>
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1 id="heading">Happy 2 months! &#10084;</h1>
+</div>
+
+<!-- Photo Grid -->
+<div style="padding:10%;">
+    <div class="row">
+        <div class="column">
+            <img src="assets/brunch.jpg">
+            <img src="assets/food.jpg">
+        </div>
+        <div class="column">
+            <img src="assets/bday.jpg">
+            <img src="assets/hair-tye.jpg">
+            <img src="assets/axe.jpg">
+        </div>
+        <div class="column">
+            <img src="assets/cry-quote.png">
+            <img src="assets/kiss.jpg">
+            <img src="assets/drinks.jpg">
+        </div>
+        <div class="column">
+            <img src="assets/me.jpg">
+            <img src="assets/tye-pt2.jpg">
+            <img src="assets/sweater.jpg">
+        </div>
     </div>
-</body>
+</div>
 
+</body>
 </html>
