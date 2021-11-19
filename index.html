@@ -3,43 +3,10 @@
 <html>
 
 <head>
-    <style>
-        h1 {
-            text-align: center;
-            font-size: 500%;
-            font-family: cursive;
-        }
-
-        p {
-            text-align: center;
-            font-size: 300%;
-            font-family: cursive;
-        }
-    </style>
-    <script>
-        function getAnswer() {
-            var d = new Date()
-            var weekday = d.getDay()
-
-            if (weekday == 6) {
-                document.getElementById("answer").innerHTML = "Yes!"
-                document.getElementById("answer").style.color = "green"
-            } else if (weekday == 5) {
-                document.getElementById("answer").innerHTML = "Almost!"
-                document.getElementById("answer").style.color = "yellow"
-            } else {
-                document.getElementById("answer").innerHTML = "No. :'("
-                document.getElementById("answer").style.color = "red"
-            }
-        }
-    </script>
+    Hello world
 </head>
 
-<body onload="getAnswer()">
-    <div>
-        <h1>Is it Saturday yet?</h1>
-        <p id="answer"></p>
-    </div>
+<body>
 </body>
 
 </html>
